@@ -1,0 +1,76 @@
+@charset 'UTF-8';
+@import url(reset.css);
+$pageTitleColor: #1B253A;
+$menuAreaBg: #2F2C48;
+
+/* mixin */
+@mixin boxSizing {
+  -ms-box-sizing:border-box;
+  -o-box-sizing:border-box;
+  -webkit-box-sizing:border-box;
+  -moz-sizing:border-box;
+  box-sizing:border-box;
+}
+@mixin boxRound4 {
+  -webkit-border-radius:4px;
+  -moz-border-radius:4px;
+  border-radius:4px;
+}
+@mixin boxRound8 {
+  -webkit-border-radius:8px;
+  -moz-border-radius:8px;
+  border-radius:8px;
+}
+@mixin transition {
+  transition:all 0.3s ease-in-out 0.1s;  // 0.1초후에 보여진후 0.3초동안 완료
+}
+@mixin transition1 {
+  transition:all 0.3s ease-in-out; 
+}
+
+/* color system */
+body {
+  width: 100vw;
+  min-width: 1024px;
+  height: 100vh;
+  min-height: 768px;
+  background:#F8F8FB;  
+}
+
+#menu {
+  background: $menuAreaBg;  
+}
+.narrow {
+  position: absolute;
+  left: 0;
+  top:0;
+  width: 80px;
+  height: 100vh;    
+}
+
+#container {
+  width: calc(100vw - 80px);
+  height: 100vh;
+  margin-left: 80px;
+  .header {
+    width: 100%;
+    height: 64px;
+    padding: 20px 25px;
+    background:#ffffff;
+    &__title {
+      color: $pageTitleColor;
+      font-weight: 700;
+      font-size: 18px;
+      text-transform: uppercase;      
+    }
+  }
+  .contents {    
+    padding: 25px;
+    &__box {
+      width: 100%;
+      height: 100%;
+      background: #ffffff;
+      @include boxRound8();
+    }
+  }
+}
