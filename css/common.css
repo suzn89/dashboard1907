@@ -38,7 +38,8 @@
 }
 
 input[type="text"],
-input[type="number"] {
+input[type="number"],
+input[type="password"] {
   display: inline-block;
   height: 35px;
   width: 100%;

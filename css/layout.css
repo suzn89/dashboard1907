@@ -1,6 +1,94 @@
 @import url(reset.css);
 @import url(style.css);
 /* mixin */
+.login {
+  width: 100vw;
+  height: 100vh;
+  background: url(../images/login_bg.png) center top no-repeat;
+}
+
+.login__area {
+  position: absolute;
+  left: 50%;
+  top: 40%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 530px;
+  height: 466px;
+}
+
+.login__bi {
+  width: 100%;
+  text-align: center;
+}
+
+.login__bi p {
+  margin-top: 10px;
+  color: #636371;
+  opacity: 0.4;
+}
+
+.login__form {
+  margin-top: 60px;
+}
+
+.login__form .box_login_ipt {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.login__form .box_login_ipt .i_label {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  text-indent: -999em;
+}
+
+.login__form .box_login_ipt .userid::after {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  z-index: 999;
+  font-family: 'iconfont';
+  content: 'ddd';
+  font-size: 20px;
+  color: #636371;
+}
+
+.login__form input {
+  height: 60px;
+  background: rgba(40, 42, 52, 0.7);
+  border: none;
+  color: #ffffff;
+}
+
+.login__form .btn_login {
+  display: block;
+  margin-top: 40px;
+}
+
+.login__form .btn_login input {
+  display: block;
+  width: 100%;
+  height: 60px;
+  background: #3265F1;
+  color: #ffffff;
+  font-size: 20px;
+  border-radius: 4px;
+}
+
+.login .footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  padding: 70px 0;
+  text-align: center;
+  border-top: 1px solid #24242D;
+  color: rgba(99, 99, 113, 0.4);
+  font-weight: 300;
+}
+
 /* color system */
 body {
   width: 100vw;
