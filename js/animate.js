@@ -11,3 +11,15 @@ $(function() {
     }
   );
 });
+
+// 검색 + 컨텐츠 박스 높이 계산
+$(function() {
+  var wrapHeight = $('.contents').height();
+  var searchHeight = $('.search__box').height();
+  $('.content__box').css('height', wrapHeight-searchHeight-45);
+  console.log(wrapHeight);
+  console.log(searchHeight);
+  $(window).resize(function(){
+    $('.content__box').css('height', wrapHeight-searchHeight-45);
+  });
+});

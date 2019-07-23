@@ -6,21 +6,83 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>dashboard template</title>
   <link rel="stylesheet" href="css/layout.css">
+  <link rel="stylesheet" href="css/common.css">
   <script src="js/jquery-2.2.4.min.js"></script>
   <script src="js/animate.js"></script>
 </head>
 <body>
   <div id="menu" class="narrow">
-    
+    <h1><a href="#"><img src="images/simbol.png" alt="홈화면"><span class="icon-logo"></span></a></h1>
+    <ul class="menulist">
+      <li><a href="#" class="on"><span class="icon-Outline"></span>Inquiry</a></li> <!-- 해당 메뉴 진입시 클래스 on 추가-->
+      <li><a href="#"><span class="icon-format_list"></span>New Data List</a></li>
+      <li><a href="#"><span class="icon-brightness"></span>Theme Settings</a></li>
+    </ul>
   </div>
+
   <section id="container">
-    <div class="header">    
-      <h2 class="header__title">System Theme Settings</h2>
-    </div>
+    <header class="header">    
+      <h2 class="header__title">System Theme Settings (administrator)</h2>
+    </header>
     <div class="contents">
-      <div class="contents__box">
-        add contents
-      </div>
+      <div class="search__box">
+        <h3>Detailed Search</h3>
+        <div class="search__input">
+          <div class="inputarea w200">
+            <span class="label">
+              System Theme
+            </span>
+            <div class="inputarea__select">
+              <select name="" id="" title="해당항목선택">
+                <option value="">Select</option>
+                <option value="">School</option>
+                <option value="">Company</option>
+                <option value="">User Customize</option>              
+              </select>   
+            </div>          
+          </div> <!-- // inputarea 끝-->
+        </div>
+        
+        <div class="btnarea align__center">
+          <a href="#" class="btn__search">Search</a>
+        </div>
+      </div> <!-- // search__box -->
+      <div class="content__box">
+        <div class="form">
+          <ul>
+            <li class="w400">
+              <label class="form__title" for="">대상자</label>              
+              <span class="form__input">
+                <input type="text" name="" id="" class="ipt_text">
+              </span>
+            </li>
+            <li class="w400">
+              <label class="form__title" for="">부서담당자</label>              
+              <span class="form__input">
+                <input type="text" name="" id="" class="ipt_text">
+              </span>
+            </li>
+            <li class="w400">
+              <label class="form__title" for="">보고자</label>              
+              <span class="form__input">
+                <input type="text" name="" id="" class="ipt_text">
+              </span>
+            </li>
+            <li class="w400">
+              <label class="form__title" for="">근태</label>              
+              <span class="form__input">
+                <input type="text" name="" id="" class="ipt_text">
+              </span>
+            </li> <!-- li 늘려서 사용 -->
+          </ul>
+        </div> <!-- // form -->
+
+        <div class="btnarea align__center">
+          <a href="#" class="btn__search">저장</a>
+          <a href="#" class="btn__cancle">취소</a>
+        </div>
+
+      </div> <!-- // content__box -->
     </div>
   </section> 
 

@@ -40,7 +40,7 @@
 }
 /* reset */
 *,:after,:before {-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box}
-html,body{margin:0;padding:0;-webkit-text-size-adjust:none;font-family:'Open Sans','Roboto','Dotum','돋움',sans-serif;font-size:14px;font-weight:500;color:#565656;line-height: 1.4;word-break:keep-all;}
+html,body{margin:0;padding:0;-webkit-text-size-adjust:none;font-family:'Open Sans','Roboto','맑은 고딕', 'Dotum','돋움',sans-serif;font-size:14px;font-weight:500;color:#565656;line-height: 1.4;word-break:keep-all;}
 body,div,p,h1,h2,h3,h4,h5,h6,ul,ol,li,dl,dt,dd,table,th,td,form,fieldset,legend,input,textarea,button,select,header,section,address,nav,footer,aside{margin:0;padding:0}
 h1,h2,h3,h4,h5,h6,strong,address{font-weight:normal}
 img,fieldset,iframe{border:0}
