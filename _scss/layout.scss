@@ -69,37 +69,47 @@ $inputBorder:#E9E9EB;
       margin-bottom: 20px;      
       .i_label {
         position: absolute;
-        left: 10px;
-        top: 10px;
-        text-indent:-999em;        
+        left: 20px;
+        top: 15px;
+        font-size: 0;       
       }
-      .userid::after {
-        position: absolute;
-        left: 10px;
-        top: 10px;
-        z-index: 999;
+      .userid::before {        
         font-family: 'iconfont';
-        content: 'ddd';
-        font-size: 20px;
+        content: '\e911';
+        font-size: 22px;
         color: #636371;
       }
+
+      .userpw::before {        
+        font-family: 'iconfont';
+        content: '\e910';
+        font-size: 22px;
+        color: #636371;
+      }
+  
+      
     }
     input {
       height: 60px;
       background:rgba(40, 42, 52, 0.7);
       border:none;
-      color: #ffffff;
+      color: #636371;
+      padding-left: 50px;
+      &::placeholder {
+        color: #636371;
+      }
     }
     .btn_login {
       display: block;
       margin-top: 40px;
       input {
         display:block;
+        padding: 0;
         width: 100%;
         height: 60px;
         background: #3265F1;
         color: #ffffff;
-        font-size: 20px;
+        font-size: 20px;        
         @include boxRound4();
       }
     }
