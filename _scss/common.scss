@@ -106,6 +106,9 @@ input[type="number"] {
   a[class^="btn"] {
     display: inline-block;        
   }
+  a[class^="btn"] + a[class^="btn"] {
+    margin-left: 10px;
+  }
   .btn {
     &__search {
       background:#cccccc;

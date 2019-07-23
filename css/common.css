@@ -77,6 +77,10 @@ input[type="number"] {
   display: inline-block;
 }
 
+.btnarea a[class^="btn"] + a[class^="btn"] {
+  margin-left: 10px;
+}
+
 .btnarea .btn__search {
   background: #cccccc;
 }
