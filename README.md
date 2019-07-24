@@ -9,9 +9,8 @@
 
 ## UI template
 
-- login
-- Search form
-- list
-- menu panel
-- modal popup
-- style guide
+- 로그인화면 : login.html
+- 대상자조회 : userlist.html
+- 신규데이터목록 : newdata.html
+- 시스템테마설정 : settings.html
+- 대시보드 : dashboard.html
