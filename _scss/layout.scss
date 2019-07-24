@@ -8,6 +8,15 @@ $menuHover:#15B0ED;
 $h3Title:#B1B1B1;
 $h3Border:#F0F0F0;
 $inputBorder:#E9E9EB;
+$inputText:#9797A7;
+$label:#ABABAB;
+$tableHeader: #ABABAB;
+$tableThBorder: #F0F0F0;
+$tableBg:#F8F8FB;
+$buttonPrimary: #3265F1;
+$buttonHover: #2956CF;
+$primaryColor:#C4C4D1;
+$primaryHover:#AFAFC1;
 
 
 /* mixin */
@@ -226,6 +235,9 @@ body {
   margin-bottom: 15px;
   .search__input {
     padding: 15px;
+    .label {
+      color: #C4C4D1;
+    }
   }
 }
 
@@ -247,4 +259,153 @@ div[class$="__box"] {
 
 .content__box {
   padding: 15px !important;
+  .list { // 리스트 테이블 관련
+    margin-top: 10px;
+    th, td {
+      padding: 8px;
+      text-align: left;
+    }
+    tr:nth-child(2n) td {
+      background: $tableBg;
+    }
+    th {
+      color: $tableHeader;
+      border-bottom: 1px solid $tableThBorder;
+      font-weight: 500;
+      &.num {
+        width: 50px;
+      }
+    }
+    td {
+      color: #2D2D2D;
+      font-weight: 400;
+      &.center {
+        text-align: center;
+      }
+      figure {
+        margin: 0;
+        text-align: left;
+        img {
+          width: 40px;
+          height: 40px;
+          border-radius: 50%;
+        }
+      }
+      a[class^="modal__"] {
+        display:inline-block;
+        min-width: 60px;
+        padding: 5px 8px;
+        text-align: center;
+        font-size: 13px;
+        @include boxRound4();
+      }
+      a[class^="modal__"] + a[class^="modal__"] {
+        margin-left: 8px;
+      }
+      .modal {
+        &__edit {
+          border: 1px solid $inputBorder;
+          color: #C4C4D1;
+        }
+        &__mapping {
+          background: $buttonPrimary;
+          color: #ffffff;
+        }
+      }
+      &.recognition {
+        figure ~ figure {
+          margin-left: -12px;
+        }
+        figure {
+          float: left;
+        }        
+        img {
+          border:3px solid #ffffff;          
+        }
+      }
+    }
+  }
+}
+
+.modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 10;
+  width: 100vw;
+  height: 100vh;
+  background: rgba($color: #21252D, $alpha: 0.57);
+  .popup {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform:translate(-50%, -50%);
+    width: 800px;
+    height: 600px;
+    background: #ffffff;
+    @include boxRound8();
+    -moz-box-shadow:0px 3px 5px #474747;
+    -webkit-box-shadow:0px 3px 5px #474747;
+    box-shadow:0px 3px 5px #474747;
+    &__title {
+      position: relative;
+      width: 100%;
+      padding: 15px;
+      border-bottom: 1px solid $h3Border;
+      h3 {
+        color: $h3Title;
+        font-weight: 700;
+        font-size: 15px;
+      }
+      .popup--close {
+        position: absolute;
+        right: 15px;
+        top: 17px;
+        i {
+          color: #9797A7;
+        }
+      }
+    }
+    &__content {
+      padding: 15px;
+      ul {
+        width: 47%;
+        float:left;
+        li {
+          .inputarea .label {
+            color: $menuNormal;
+            font-weight: 500;
+          }
+          .inputarea input {
+            font-size: 15px;
+          }
+        }        
+      }
+      ul + ul {
+        margin-left: 6%;
+      }
+      .inputarea {
+        &__radio {
+          label {
+            color: $menuNormal;
+            margin-right: 10px;
+            font-weight: 400;
+          }
+          input[type="radio"] {
+            margin-right: 4px;
+          }
+        }
+        &__checkbox {
+          label {
+            color: $menuNormal;
+            margin-right: 10px;            
+            font-weight: 400;
+          }
+          input[type="checkbox"] {
+            margin-right: 4px;            
+          }
+        }
+      }
+    }
+  }
 }

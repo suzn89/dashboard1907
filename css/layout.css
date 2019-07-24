@@ -225,6 +225,10 @@ body {
   padding: 15px;
 }
 
+.search__box .search__input .label {
+  color: #C4C4D1;
+}
+
 div[class$="__box"] {
   width: 100%;
   padding: 15px 0;
@@ -244,5 +248,172 @@ div[class$="__box"] h3 {
 
 .content__box {
   padding: 15px !important;
+}
+
+.content__box .list {
+  margin-top: 10px;
+}
+
+.content__box .list th, .content__box .list td {
+  padding: 8px;
+  text-align: left;
+}
+
+.content__box .list tr:nth-child(2n) td {
+  background: #F8F8FB;
+}
+
+.content__box .list th {
+  color: #ABABAB;
+  border-bottom: 1px solid #F0F0F0;
+  font-weight: 500;
+}
+
+.content__box .list th.num {
+  width: 50px;
+}
+
+.content__box .list td {
+  color: #2D2D2D;
+  font-weight: 400;
+}
+
+.content__box .list td.center {
+  text-align: center;
+}
+
+.content__box .list td figure {
+  margin: 0;
+  text-align: left;
+}
+
+.content__box .list td figure img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.content__box .list td a[class^="modal__"] {
+  display: inline-block;
+  min-width: 60px;
+  padding: 5px 8px;
+  text-align: center;
+  font-size: 13px;
+  border-radius: 4px;
+}
+
+.content__box .list td a[class^="modal__"] + a[class^="modal__"] {
+  margin-left: 8px;
+}
+
+.content__box .list td .modal__edit {
+  border: 1px solid #E9E9EB;
+  color: #C4C4D1;
+}
+
+.content__box .list td .modal__mapping {
+  background: #3265F1;
+  color: #ffffff;
+}
+
+.content__box .list td.recognition figure ~ figure {
+  margin-left: -12px;
+}
+
+.content__box .list td.recognition figure {
+  float: left;
+}
+
+.content__box .list td.recognition img {
+  border: 3px solid #ffffff;
+}
+
+.modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 10;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(33, 37, 45, 0.57);
+}
+
+.modal .popup {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 800px;
+  height: 600px;
+  background: #ffffff;
+  border-radius: 8px;
+  -webkit-box-shadow: 0px 3px 5px #474747;
+  box-shadow: 0px 3px 5px #474747;
+}
+
+.modal .popup__title {
+  position: relative;
+  width: 100%;
+  padding: 15px;
+  border-bottom: 1px solid #F0F0F0;
+}
+
+.modal .popup__title h3 {
+  color: #B1B1B1;
+  font-weight: 700;
+  font-size: 15px;
+}
+
+.modal .popup__title .popup--close {
+  position: absolute;
+  right: 15px;
+  top: 17px;
+}
+
+.modal .popup__title .popup--close i {
+  color: #9797A7;
+}
+
+.modal .popup__content {
+  padding: 15px;
+}
+
+.modal .popup__content ul {
+  width: 47%;
+  float: left;
+}
+
+.modal .popup__content ul li .inputarea .label {
+  color: #7B8297;
+  font-weight: 500;
+}
+
+.modal .popup__content ul li .inputarea input {
+  font-size: 15px;
+}
+
+.modal .popup__content ul + ul {
+  margin-left: 6%;
+}
+
+.modal .popup__content .inputarea__radio label {
+  color: #7B8297;
+  margin-right: 10px;
+  font-weight: 400;
+}
+
+.modal .popup__content .inputarea__radio input[type="radio"] {
+  margin-right: 4px;
+}
+
+.modal .popup__content .inputarea__checkbox label {
+  color: #7B8297;
+  margin-right: 10px;
+  font-weight: 400;
+}
+
+.modal .popup__content .inputarea__checkbox input[type="checkbox"] {
+  margin-right: 4px;
 }
 /*# sourceMappingURL=layout.css.map */

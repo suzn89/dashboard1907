@@ -6,7 +6,14 @@ $menuHover:#15B0ED;
 $h3Title:#B1B1B1;
 $h3Border:#F0F0F0;
 $inputBorder:#E9E9EB;
+$inputText:#9797A7;
 $label:#ABABAB;
+$tableHeader: #ABABAB;
+$tableThBorder: #F0F0F0;
+$buttonPrimary: #3265F1;
+$buttonHover: #2956CF;
+$primaryColor:#C4C4D1;
+$primaryHover:#AFAFC1;
 
 
 /* mixin */
@@ -39,7 +46,9 @@ $label:#ABABAB;
   transition:all 0.3s ease-in-out; 
 }
 .inputarea {
-  width: 100%;  
+  width: 100%;
+  margin-right: 20px;
+  margin-bottom: 20px;
   .label {
     display:block;
     margin-bottom: 5px;        
@@ -47,7 +56,8 @@ $label:#ABABAB;
   &__select {
     position: relative;
     height: 35px;    
-    border:1px solid #cccccc;    
+    border:1px solid $inputBorder;
+    @include boxRound4();
     &:after {
       position:absolute;
       font-family: 'iconfont';
@@ -55,16 +65,27 @@ $label:#ABABAB;
       right:10px;
       top:2px;
       font-size:20px;
+      color: $inputText;
     }
     select {
       width: 100%;
       height: 100%;
       padding-left: 10px;
+      background: none;
+      color: $inputText;
     }
   }
+  &__text {
+    input{
+      color: $inputText;
+      font-size: 15px;
+    }    
+  }
 }
+
 .w200 {
-  width: 200px;
+  display: inline-block;
+  width: 200px;    
 }
 .w400 {
   width: 400px;
@@ -102,19 +123,63 @@ input[type="password"] {
 
 
 .btnarea {
+  clear:both;
   width: 100%;
   margin-top: 20px;
   a[class^="btn"] {
-    display: inline-block;        
+    display: inline-block;
+    min-width: 80px;
+    height: 30px;
+    line-height: 30px;
+    padding: 0 15px;
+    @include boxRound4();
+    text-align: center;
   }
   a[class^="btn"] + a[class^="btn"] {
     margin-left: 10px;
   }
-  .btn {
+  .btn {    
     &__search {
-      background:#cccccc;
+      background:$buttonPrimary;
+      color: #ffffff;
+      &:before {
+        font-family: 'iconfont';
+        content: '\e90e';
+        padding-right: 10px;
+        font-size: 12px;
+      }
+      &:hover {
+        background: $buttonHover;
+        @include transition1();
+      }
+    }
+    &__small {
+      background:$primaryColor;
+      color: #ffffff;
+      font-weight: 400;
+      &:hover {
+        background: $primaryHover;
+        @include transition1();
+      }
+    }
+    &__primary {
+      background:$buttonPrimary;
+      color: #ffffff;
+      font-weight: 500;
+    }
+    &__text {
+      background:none;
+      color: $primaryColor;
+      font-weight: 500;
     }
   }
+}
+.btn__right {
+  font-size: 13px;
+  color: $buttonPrimary;
+  float: right;
+  letter-spacing: -1px;
+  text-decoration: underline;
 }
 .align__center {
   text-align: center;
@@ -124,5 +189,9 @@ input[type="password"] {
 }
 .align__left {
   text-align: left;
+}
+
+.mt0 {
+  margin-top: 0 !important;
 }
  

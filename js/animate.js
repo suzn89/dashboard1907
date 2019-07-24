@@ -23,3 +23,15 @@ $(function() {
     $('.content__box').css('height', wrapHeight-searchHeight-45);
   });
 });
+
+
+// 팝업 열기,닫기
+$(function(){
+  $('.modal').hide();
+  $('.modal__edit').on('click',function(){
+    $('.modal').fadeIn();
+  });
+  $('.popup--close, .btnarea > .close').on('click',function(){
+    $('.modal').fadeOut();
+  });  
+});
