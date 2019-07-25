@@ -183,6 +183,11 @@ body {
   padding: 45px 23px;
 }
 
+.wide {
+  -webkit-box-shadow: 0px 0px 6px #777777;
+  box-shadow: 0px 0px 6px #777777;
+}
+
 #container {
   width: calc(100vw - 80px);
   height: 100vh;
@@ -191,17 +196,109 @@ body {
 }
 
 #container .header {
+  position: relative;
   width: 100%;
   height: 64px;
   padding: 20px 25px;
   background: #ffffff;
+  text-align: right;
 }
 
 #container .header__title {
+  float: left;
   color: #1B253A;
   font-weight: 700;
   font-size: 18px;
   text-transform: uppercase;
+}
+
+#container .header__status {
+  display: inline-block;
+}
+
+#container .header__status ul li {
+  display: inline-block;
+  font-size: 16px;
+}
+
+#container .header__status ul li + li {
+  margin-left: 15px;
+}
+
+#container .header__status ul li span {
+  display: inline-block;
+  padding: 3px 10px;
+  margin-right: 10px;
+  border-radius: 20px;
+  font-size: 13px;
+}
+
+#container .header__status ul li span.total {
+  background: #1991EB;
+  color: #ffffff;
+  font-weight: 400;
+}
+
+#container .header__status ul li span.present {
+  background: #2F2C48;
+  color: #ffffff;
+  font-weight: 400;
+}
+
+#container .header__status ul li span.absence {
+  background: #6B6B6B;
+  color: #ffffff;
+  font-weight: 400;
+}
+
+#container .header__user {
+  display: inline-block;
+  margin-top: -8px;
+  margin-left: 30px;
+  height: 30px;
+  line-height: 30px;
+  text-align: left;
+}
+
+#container .header__user figure {
+  display: inline-block;
+  margin: 0 8px 0 0;
+}
+
+#container .header__user figure img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+#container .header__user p {
+  display: inline-block;
+  font-weight: 400;
+}
+
+#container .header__user p span {
+  font-weight: 600;
+  color: #3265F1;
+}
+
+#container .header__user .logout {
+  font-size: 0;
+}
+
+#container .header__user .logout:after {
+  font-family: 'iconfont';
+  content: '\e901';
+  color: #B1B1B1;
+  font-size: 17px;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+#container .header__user .logout:hover:after {
+  font-family: 'iconfont';
+  content: '\e901';
+  color: #3265F1;
+  font-size: 17px;
 }
 
 #container .contents {
@@ -558,5 +655,95 @@ div[class$="__box"] h3 {
 .modal .popup .btnarea {
   padding: 0 15px;
   margin-top: 0 !important;
+}
+
+.dashboard__teams {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 982px;
+  height: 747px;
+}
+
+.dashboard__teams ul li {
+  position: relative;
+  float: left;
+  width: 318px;
+  height: 368px;
+  padding-top: 30px;
+}
+
+.dashboard__teams ul li dl {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.dashboard__teams ul li dl dt {
+  display: inline-block;
+  width: 30%;
+  color: #C4C4D1;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 50px;
+  border-bottom: 1px dotted #E9E9EB;
+}
+
+.dashboard__teams ul li dl dt:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.dashboard__teams ul li dl dd {
+  display: inline-block;
+  width: 65%;
+  text-align: right;
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 50px;
+  border-bottom: 1px dotted #E9E9EB;
+}
+
+.dashboard__teams ul li dl dd:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.dashboard__teams ul li dl .bordernone {
+  border-bottom: none;
+}
+
+.dashboard__teams ul li .teamname {
+  display: block;
+  position: absolute;
+  bottom: 45px;
+  width: 100%;
+  padding: 0 20px;
+  text-align: center;
+  color: #AFAFC1;
+  font-size: 18px;
+}
+
+.dashboard__teams .team01 {
+  background: url(../images/bg01.png) center top no-repeat;
+}
+
+.dashboard__teams .team02 {
+  background: url(../images/bg02.png) center top no-repeat;
+}
+
+.dashboard__teams .team03 {
+  background: url(../images/bg03.png) center top no-repeat;
+}
+
+.dashboard__teams .team04 {
+  background: url(../images/bg04.png) center top no-repeat;
+}
+
+.dashboard__teams .team05 {
+  background: url(../images/bg05.png) center top no-repeat;
 }
 /*# sourceMappingURL=layout.css.map */

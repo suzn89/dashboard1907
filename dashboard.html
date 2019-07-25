@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>dashboard template</title>
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/layout.css">  
+  <script src="js/jquery-2.2.4.min.js"></script>
+  <script src="js/animate.js"></script>
+</head>
+<body>
+  <div id="menu" class="narrow">
+    <h1><a href="#"><img src="images/simbol.png" alt="홈화면"><span class="icon-logo"></span></a></h1>
+    <ul class="menulist">
+      <li><a href="#" class="on"><span class="icon-Outline"></span>Inquiry</a></li> <!-- 해당 메뉴 진입시 클래스 on 추가-->
+      <li><a href="#"><span class="icon-format_list"></span>New Data List</a></li>
+      <li><a href="#"><span class="icon-brightness"></span>Theme Settings</a></li>
+    </ul>
+  </div>
+  <section id="container" class="dashboard">
+    <header class="header">    
+      <h2 class="header__title">Status Dashboard</h2>
+      <div class="header__status">
+        <ul>
+          <li><span class="total">Total</span>150</li>
+          <li><span class="present">Present</span>140</li>
+          <li><span class="absence">Absence</span>10</li>
+        </ul>
+      </div> <!-- // header__status -->
+      <div class="header__user">
+        <figure><img src="images/person01.png"></figure>
+        <p><span>Tom Holland</span> is logging in.</p>
+        <a href="#" class="logout">로그아웃</a>
+      </div>      
+    </header>
+
+    <div class="dashboard__teams">
+      <ul>
+        <li class="team01">
+          <dl>
+            <dt>Total</dt>
+            <dd>30</dd>
+            <dt>Present</dt>
+            <dd>28</dd>
+            <dt class="bordernone">Absence</dt>
+            <dd class="bordernone">2</dd>
+          </dl>
+          <span class="teamname">Management Support</span>
+        </li>
+        <li class="team02">
+          <dl>
+            <dt>Total</dt>
+            <dd>30</dd>
+            <dt>Present</dt>
+            <dd>28</dd>
+            <dt class="bordernone">Absence</dt>
+            <dd class="bordernone">2</dd>
+          </dl>
+          <span class="teamname">Finance</span>
+        </li>
+        <li class="team03">
+          <dl>
+            <dt>Total</dt>
+            <dd>30</dd>
+            <dt>Present</dt>
+            <dd>28</dd>
+            <dt class="bordernone">Absence</dt>
+            <dd class="bordernone">2</dd>
+          </dl>
+          <span class="teamname">Laboratory 1</span>
+        </li>
+        <li class="team04">
+          <dl>
+            <dt>Total</dt>
+            <dd>30</dd>
+            <dt>Present</dt>
+            <dd>28</dd>
+            <dt class="bordernone">Absence</dt>
+            <dd class="bordernone">2</dd>
+          </dl>
+          <span class="teamname">Laboratory 2</span>
+        </li>
+        <li>
+          
+        </li>
+        <li class="team05">
+          <dl>
+            <dt>Total</dt>
+            <dd>30</dd>
+            <dt>Present</dt>
+            <dd>28</dd>
+            <dt class="bordernone">Absence</dt>
+            <dd class="bordernone">2</dd>
+          </dl>
+          <span class="teamname">Laboratory 3</span>
+        </li>
+      </ul>
+
+    </div> <!-- // dashboard__teams -->
+
+  </section>
+</body>
+</html>
