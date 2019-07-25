@@ -143,6 +143,62 @@ input[type="password"] {
   font-weight: 500;
 }
 
+.pagenation {
+  position: absolute;
+  bottom: 10px;
+  width: 100%;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.pagenation ul {
+  display: inline-block;
+}
+
+.pagenation ul li {
+  float: left;
+  margin: 0 3px;
+}
+
+.pagenation ul li a {
+  display: block;
+  color: #7B8297;
+}
+
+.pagenation ul li a.active {
+  color: #2D2D2D;
+  font-weight: bold;
+}
+
+.pagenation ul li a:hover {
+  color: #2D2D2D;
+  font-weight: bold;
+}
+
+.pagenation ul li a.first:after {
+  font-family: 'iconfont';
+  content: '\e902';
+  font-size: 15px;
+}
+
+.pagenation ul li a.prev:after {
+  font-family: 'iconfont';
+  content: '\e905';
+  font-size: 15px;
+}
+
+.pagenation ul li a.next:after {
+  font-family: 'iconfont';
+  content: '\e906';
+  font-size: 15px;
+}
+
+.pagenation ul li a.end:after {
+  font-family: 'iconfont';
+  content: '\e908';
+  font-size: 15px;
+}
+
 .btn__right {
   font-size: 13px;
   color: #3265F1;

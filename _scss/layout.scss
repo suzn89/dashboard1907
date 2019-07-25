@@ -258,9 +258,9 @@ div[class$="__box"] {
 }
 
 .content__box {
+  position: relative;
   padding: 15px !important;
-  .list { // 리스트 테이블 관련
-    margin-top: 10px;
+  .list { // 리스트 테이블 관련    
     th, td {
       padding: 8px;
       text-align: left;
@@ -367,17 +367,26 @@ div[class$="__box"] {
       }
     }
     &__content {
+      height: 490px;
+      overflow-y: auto;
       padding: 15px;
+      margin-bottom: 10px;
       ul {
         width: 47%;
         float:left;
         li {
+          .inputarea {
+            height: 59px;
+          }
           .inputarea .label {
             color: $menuNormal;
             font-weight: 500;
           }
           .inputarea input {
             font-size: 15px;
+          }
+          .inputarea input[disabled] {
+            background: $inputBorder;
           }
         }        
       }
@@ -406,6 +415,121 @@ div[class$="__box"] {
           }
         }
       }
+      .search__input {
+        width: 100%;
+        padding: 10px;
+        min-height: 100px;
+        margin-bottom: 15px;
+        @include boxRound8();
+        background: #F5F6FA;
+        .label {
+          color: #C4C4D1;
+        }
+        select {
+          background: #ffffff;
+        }
+        .inputarea__calendar {
+          position: relative;
+          width: 120px;
+          height: 35px;
+          float:left;
+          input {
+            font-size: 14px;
+            color: $menuNormal;
+          }
+          .btn_cal {
+            display: inlnie-block;            
+            text-indent:-999em;            
+            &:after {
+              position: absolute;
+              right: 10px;
+              top: 5px;
+              font-family: 'iconfont';
+              content: '\e900';
+              text-indent: 0;
+              color: #c4c4d1;
+              font-size: 16px;
+            }
+            
+          }
+        }
+        .from {
+          float:left;
+          margin: 0 4px;
+          line-height: 35px;
+          color: $label;
+        }
+      }
+      .list { // 리스트 테이블 관련
+        margin-top: 10px;
+        th, td {
+          padding: 8px;
+          text-align: left;
+        }
+        tr:nth-child(2n) td {
+          background: $tableBg;
+        }
+        th {
+          color: $tableHeader;
+          border-bottom: 1px solid $tableThBorder;
+          font-weight: 500;
+          &.num {
+            width: 50px;
+          }
+        }
+        td {
+          color: #2D2D2D;
+          font-weight: 400;
+          &.center {
+            text-align: center;
+          }
+          figure {
+            margin: 0;
+            text-align: left;
+            img {
+              width: 40px;
+              height: 40px;
+              border-radius: 50%;
+            }
+          }
+          a[class^="modal__"] {
+            display:inline-block;
+            min-width: 60px;
+            padding: 5px 8px;
+            text-align: center;
+            font-size: 13px;
+            @include boxRound4();
+          }
+          a[class^="modal__"] + a[class^="modal__"] {
+            margin-left: 8px;
+          }
+          .modal {
+            &__edit {
+              border: 1px solid $inputBorder;
+              color: #C4C4D1;
+            }
+            &__mapping {
+              background: $buttonPrimary;
+              color: #ffffff;
+            }
+          }
+          &.recognition {
+            figure ~ figure {
+              margin-left: -12px;
+            }
+            figure {
+              float: left;
+            }        
+            img {
+              border:3px solid #ffffff;          
+            }
+          }
+        }
+      }
+    }
+    .btnarea {
+      padding: 0 15px;
+      margin-top: 0 !important;
     }
   }
 }

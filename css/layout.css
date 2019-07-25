@@ -247,11 +247,8 @@ div[class$="__box"] h3 {
 }
 
 .content__box {
+  position: relative;
   padding: 15px !important;
-}
-
-.content__box .list {
-  margin-top: 10px;
 }
 
 .content__box .list th, .content__box .list td {
@@ -376,12 +373,19 @@ div[class$="__box"] h3 {
 }
 
 .modal .popup__content {
+  height: 490px;
+  overflow-y: auto;
   padding: 15px;
+  margin-bottom: 10px;
 }
 
 .modal .popup__content ul {
   width: 47%;
   float: left;
+}
+
+.modal .popup__content ul li .inputarea {
+  height: 59px;
 }
 
 .modal .popup__content ul li .inputarea .label {
@@ -391,6 +395,10 @@ div[class$="__box"] h3 {
 
 .modal .popup__content ul li .inputarea input {
   font-size: 15px;
+}
+
+.modal .popup__content ul li .inputarea input[disabled] {
+  background: #E9E9EB;
 }
 
 .modal .popup__content ul + ul {
@@ -415,5 +423,140 @@ div[class$="__box"] h3 {
 
 .modal .popup__content .inputarea__checkbox input[type="checkbox"] {
   margin-right: 4px;
+}
+
+.modal .popup__content .search__input {
+  width: 100%;
+  padding: 10px;
+  min-height: 100px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  background: #F5F6FA;
+}
+
+.modal .popup__content .search__input .label {
+  color: #C4C4D1;
+}
+
+.modal .popup__content .search__input select {
+  background: #ffffff;
+}
+
+.modal .popup__content .search__input .inputarea__calendar {
+  position: relative;
+  width: 120px;
+  height: 35px;
+  float: left;
+}
+
+.modal .popup__content .search__input .inputarea__calendar input {
+  font-size: 14px;
+  color: #7B8297;
+}
+
+.modal .popup__content .search__input .inputarea__calendar .btn_cal {
+  display: inlnie-block;
+  text-indent: -999em;
+}
+
+.modal .popup__content .search__input .inputarea__calendar .btn_cal:after {
+  position: absolute;
+  right: 10px;
+  top: 5px;
+  font-family: 'iconfont';
+  content: '\e900';
+  text-indent: 0;
+  color: #c4c4d1;
+  font-size: 16px;
+}
+
+.modal .popup__content .search__input .from {
+  float: left;
+  margin: 0 4px;
+  line-height: 35px;
+  color: #ABABAB;
+}
+
+.modal .popup__content .list {
+  margin-top: 10px;
+}
+
+.modal .popup__content .list th, .modal .popup__content .list td {
+  padding: 8px;
+  text-align: left;
+}
+
+.modal .popup__content .list tr:nth-child(2n) td {
+  background: #F8F8FB;
+}
+
+.modal .popup__content .list th {
+  color: #ABABAB;
+  border-bottom: 1px solid #F0F0F0;
+  font-weight: 500;
+}
+
+.modal .popup__content .list th.num {
+  width: 50px;
+}
+
+.modal .popup__content .list td {
+  color: #2D2D2D;
+  font-weight: 400;
+}
+
+.modal .popup__content .list td.center {
+  text-align: center;
+}
+
+.modal .popup__content .list td figure {
+  margin: 0;
+  text-align: left;
+}
+
+.modal .popup__content .list td figure img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+}
+
+.modal .popup__content .list td a[class^="modal__"] {
+  display: inline-block;
+  min-width: 60px;
+  padding: 5px 8px;
+  text-align: center;
+  font-size: 13px;
+  border-radius: 4px;
+}
+
+.modal .popup__content .list td a[class^="modal__"] + a[class^="modal__"] {
+  margin-left: 8px;
+}
+
+.modal .popup__content .list td .modal__edit {
+  border: 1px solid #E9E9EB;
+  color: #C4C4D1;
+}
+
+.modal .popup__content .list td .modal__mapping {
+  background: #3265F1;
+  color: #ffffff;
+}
+
+.modal .popup__content .list td.recognition figure ~ figure {
+  margin-left: -12px;
+}
+
+.modal .popup__content .list td.recognition figure {
+  float: left;
+}
+
+.modal .popup__content .list td.recognition img {
+  border: 3px solid #ffffff;
+}
+
+.modal .popup .btnarea {
+  padding: 0 15px;
+  margin-top: 0 !important;
 }
 /*# sourceMappingURL=layout.css.map */
