@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>dashboard template</title>
+  <link rel="stylesheet" href="css/common.css">
+  <link rel="stylesheet" href="css/layout.css">  
+  <script src="js/jquery-2.2.4.min.js"></script>
+  <script src="js/animate.js"></script>
+</head>
+<body>
+  <div id="menu" class="narrow">
+    <h1><a href="#"><img src="images/simbol.png" alt="홈화면"><span class="icon-logo"></span></a></h1>
+    <ul class="menulist">
+      <li><a href="#" class="on"><span class="icon-Outline"></span>Inquiry</a></li> <!-- 해당 메뉴 진입시 클래스 on 추가-->
+      <li><a href="#"><span class="icon-format_list"></span>New Data List</a></li>
+      <li><a href="#"><span class="icon-brightness"></span>Theme Settings</a></li>
+    </ul>
+  </div>
+
+  <section id="container">
+    <header class="header">    
+      <h2 class="header__title">New Data List</h2>
+      <div class="header__status">
+        <ul>
+          <li><span class="total">Total</span>150</li>
+          <li><span class="present">Present</span>140</li>
+          <li><span class="absence">Absence</span>10</li>
+        </ul>
+      </div> <!-- // header__status -->
+      <div class="header__user">
+        <figure><img src="images/person01.png"></figure>
+        <p><span>Tom Holland</span> is logging in.</p>
+        <a href="#" class="logout">로그아웃</a>
+      </div>   
+    </header>
+    <div class="contents">
+      <div class="search__box">
+        <h3>Detailed Search</h3>
+        <div class="search__input">
+          <div class="inputarea w200">
+            <span class="label">
+              Department
+            </span>
+            <div class="inputarea__select">
+              <select name="" id="" title="해당항목선택">
+                <option value="">Select All</option>
+                <option value="">Team A</option>
+                <option value="">Team B</option>
+                <option value="">Team C</option>              
+              </select>   
+            </div>          
+          </div> <!-- // inputarea 끝-->
+          <div class="inputarea w200">
+            <span class="label">
+              Name
+            </span>
+            <div class="inputarea__text">
+              <input type="text" title="" name="" id="">
+            </div>          
+          </div> <!-- // inputarea 끝-->
+         
+          <div class="inputarea w200">
+            <span class="label">
+              Identification number
+            </span>
+            <div class="inputarea__text">
+              <input type="text" title="" name="" id="">
+            </div>          
+          </div> <!-- // inputarea 끝-->
+        </div>
+        
+        <div class="btnarea align__center">
+          <a href="#" class="btn__search">Search</a>
+        </div>
+      </div> <!-- // search__box -->
+      <div class="content__box">
+        <div class="btnarea align__right mt0">
+          <a href="#" class="btn__small">ADD</a>
+        </div>
+        <div class="listwrap">
+          <table class="list">
+            <thead>
+              <tr>
+                <th class="num">No</th>
+                <th>Profile</th>
+                <th>Name</th>
+                <th>Department</th>
+                <th>ID Number</th>
+                <th>Report</th>
+                <th>In charge</th>
+                <th>Contact</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="center">1</td>
+                <td><figure><img src="images/person01.png"></figure></td>
+                <td>Billie Eilish</td>
+                <td>Lab 1</td>
+                <td>ab456894</td>
+                <td>Thomas Stanley Holland</td>
+                <td>Tom Holland</td>
+                <td>010-1111-1111</td>                
+              </tr>
+              <tr>
+                <td class="center">1</td>
+                <td><figure><img src="images/person01.png"></figure></td>
+                <td>Billie Eilish</td>
+                <td>Lab 1</td>
+                <td>ab456894</td>
+                <td>Thomas Stanley Holland</td>
+                <td>Tom Holland</td>
+                <td>010-1111-1111</td>                
+              </tr>
+              <tr>
+                <td class="center">1</td>
+                <td><figure><img src="images/person01.png"></figure></td>
+                <td>Billie Eilish</td>
+                <td>Lab 1</td>
+                <td>ab456894</td>
+                <td>Thomas Stanley Holland</td>
+                <td>Tom Holland</td>
+                <td>010-1111-1111</td>                
+              </tr>
+              <tr>
+                <td class="center">1</td>
+                <td><figure><img src="images/person01.png"></figure></td>
+                <td>Billie Eilish</td>
+                <td>Lab 1</td>
+                <td>ab456894</td>
+                <td>Thomas Stanley Holland</td>
+                <td>Tom Holland</td>
+                <td>010-1111-1111</td>                
+              </tr>
+              <tr>
+                <td class="center">1</td>
+                <td><figure><img src="images/person01.png"></figure></td>
+                <td>Billie Eilish</td>
+                <td>Lab 1</td>
+                <td>ab456894</td>
+                <td>Thomas Stanley Holland</td>
+                <td>Tom Holland</td>
+                <td>010-1111-1111</td>                
+              </tr>
+              <tr>
+                <td class="center">1</td>
+                <td><figure><img src="images/person01.png"></figure></td>
+                <td>Billie Eilish</td>
+                <td>Lab 1</td>
+                <td>ab456894</td>
+                <td>Thomas Stanley Holland</td>
+                <td>Tom Holland</td>
+                <td>010-1111-1111</td>                
+              </tr>
+              <tr>
+                <td class="center">1</td>
+                <td><figure><img src="images/person01.png"></figure></td>
+                <td>Billie Eilish</td>
+                <td>Lab 1</td>
+                <td>ab456894</td>
+                <td>Thomas Stanley Holland</td>
+                <td>Tom Holland</td>
+                <td>010-1111-1111</td>                
+              </tr>
+              <tr>
+                <td class="center">1</td>
+                <td><figure><img src="images/person01.png"></figure></td>
+                <td>Billie Eilish</td>
+                <td>Lab 1</td>
+                <td>ab456894</td>
+                <td>Thomas Stanley Holland</td>
+                <td>Tom Holland</td>
+                <td>010-1111-1111</td>                
+              </tr>
+              <tr>
+                <td class="center">1</td>
+                <td><figure><img src="images/person01.png"></figure></td>
+                <td>Billie Eilish</td>
+                <td>Lab 1</td>
+                <td>ab456894</td>
+                <td>Thomas Stanley Holland</td>
+                <td>Tom Holland</td>
+                <td>010-1111-1111</td>                
+              </tr>
+              <tr>
+                <td class="center">1</td>
+                <td><figure><img src="images/person01.png"></figure></td>
+                <td>Billie Eilish</td>
+                <td>Lab 1</td>
+                <td>ab456894</td>
+                <td>Thomas Stanley Holland</td>
+                <td>Tom Holland</td>
+                <td>010-1111-1111</td>                
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pagenation">
+          <ul>
+            <li><a href="#" class="first"></a></li>
+            <li><a href="#" class="prev"></a></li>
+            <li><a href="#" class="active">1</a></li>
+            <li><a href="#">2</a></li>
+            <li><a href="#" class="next"></a></li>
+            <li><a href="#" class="end"></a></li>
+          </ul>
+        </div> <!-- // pagenation -->
+      </div> <!-- // content__box -->
+    </div>
+  </section> 
+
+  <div class="modal edit_modal"> <!-- edit 모달 시작-->
+    <div class="popup">
+      <div class="popup__title">
+        <h3>User Details</h3>
+        <a href="#" class="popup--close"><i class="icon-close"></i></a>
+      </div>
+      <div class="popup__content">
+        <ul>
+          <li>
+            <div class="inputarea">
+              <span class="label">
+                Identification number
+              </span>
+              <div class="inputarea__text">
+                <input type="text" title="" name="" id="" value="489465423" disabled>
+              </div>          
+            </div> <!-- // inputarea 끝-->
+          </li>
+          <li>
+            <div class="inputarea">
+              <span class="label">
+                Name
+              </span>
+              <div class="inputarea__text">
+                <input type="text" title="" name="" id="" value="Sujeong Kim" disabled>
+              </div>          
+            </div> <!-- // inputarea 끝-->
+          </li>
+          <li>
+            <div class="inputarea">
+              <span class="label">
+                Department
+              </span>
+              <div class="inputarea__select">
+                <select name="" id="" title="해당항목선택">
+                  <option value="">Select All</option>
+                  <option value="">Male</option>
+                  <option value="">Female</option>
+                </select>   
+              </div>              
+            </div> <!-- // inputarea 끝-->
+          </li>
+          <li>
+            <div class="inputarea">
+              <span class="label">
+                Report
+                <a href="#" class="btn__right">Search</a>
+              </span>
+              <div class="inputarea__select">
+                <select name="" id="" title="해당항목선택">
+                  <option value="">Select All</option>
+                  <option value="">Male</option>
+                  <option value="">Female</option>
+                </select>
+              </div>          
+            </div> <!-- // inputarea 끝-->
+          </li>
+          <li>
+            <div class="inputarea">
+              <span class="label">
+                Report E-mail
+              </span>
+              <div class="inputarea__text">
+                <input type="text" title="" name="" id="">
+              </div>          
+            </div> <!-- // inputarea 끝-->
+          </li>
+          <li>
+            <div class="inputarea">
+              <span class="label">
+                Report Number
+              </span>
+              <div class="inputarea__text">
+                <input type="text" title="" name="" id="">
+              </div>          
+            </div> <!-- // inputarea 끝-->
+          </li>
+        </ul>
+        <ul>
+          <li>
+            <div class="inputarea">
+              <span class="label">
+                Phone number
+              </span>
+              <div class="inputarea__text">
+                <input type="text" title="" name="" id="" value="010-9792-0524">
+              </div>          
+            </div> <!-- // inputarea 끝-->
+          </li>
+          <li>
+            <div class="inputarea">
+              <span class="label">
+                Address
+              </span>
+              <div class="inputarea__text">
+                <input type="text" title="" name="" id="">
+              </div>          
+            </div> <!-- // inputarea 끝-->
+          </li>
+          <li>
+            <div class="inputarea">
+              <span class="label">
+                Gender
+              </span>
+              <div class="inputarea__radio">
+                <label for="male"><input type="radio" name="gender" id="male" checked>Male</label>
+                <label for="female"><input type="radio" name="gender" id="female">Female</label>
+              </div>              
+            </div> <!-- // inputarea 끝-->
+          </li>
+          <li>
+            <div class="inputarea">
+              <span class="label">
+                Usage status
+              </span>
+              <div class="inputarea__radio">
+                <label for="radio1"><input type="radio" name="use" id="radio1" checked>Use</label>
+                <label for="radio2"><input type="radio" name="use" id="radio2">Not used</label>
+              </div>              
+            </div> <!-- // inputarea 끝-->
+          </li>
+          <li>
+            <div class="inputarea">
+              <span class="label">
+                Profile
+              </span>
+              <div class="inputarea__text">
+                <input type="file" title="" name="" id="">
+              </div>          
+            </div> <!-- // inputarea 끝-->
+          </li>
+          <li>
+            <div class="inputarea">
+              <span class="label">
+                Reporting method
+              </span>
+              <div class="inputarea__checkbox">
+                <input type="checkbox" title="" name="" id="sms"><label for="sms">SMS</label>
+                <input type="checkbox" title="" name="" id="email"><label for="email">E-mail</label>
+                <input type="checkbox" title="" name="" id="line"><label for="line">LINE</label>
+              </div>          
+            </div> <!-- // inputarea 끝-->
+          </li>
+        </ul>
+      </div> <!-- // popup__content 끝 -->
+      <div class="btnarea align__right">
+        <a href="#" class="btn__text close">CANCLE</a>
+        <a href="#" class="btn__primary">SAVE</a>
+      </div>
+    </div>    
+  </div> <!-- edit 모달 끝 -->
+
+
+  <div class="modal mapping_modal"> <!-- mapping 모달 시작-->
+    <div class="popup">
+      <div class="popup__title">
+        <h3>Mapping</h3>
+        <a href="#" class="popup--close"><i class="icon-close"></i></a>
+      </div>
+      <div class="popup__content">
+          <div class="search__input">
+            <div class="inputarea" style="width:264px; float:left;">
+              <span class="label">
+                Period
+              </span>
+              <div class="inputarea__calendar">
+                <input type="text" title="검색어 입력" name="" id="">  
+                <button class="btn_cal"><span class="ir">검색</span></button>                                                 
+              </div>
+              <span class="from">~</span>
+              <div class="inputarea__calendar">
+                <input type="text" title="검색어 입력" name="" id="">  
+                <button class="btn_cal"><span class="ir">검색</span></button>                                                 
+              </div>
+            </div> <!-- // inputarea 끝-->
+            <div class="inputarea w200">
+              <span class="label">
+                Spot
+              </span>
+              <div class="inputarea__select">
+                <select name="" id="" title="해당항목선택">
+                  <option value="">Select All</option>
+                  <option value="">Male</option>
+                  <option value="">Female</option>
+                </select>   
+              </div>          
+            </div> <!-- // inputarea 끝-->
+            <div class="inputarea w200">
+              <span class="label">
+                Device number
+              </span>
+              <div class="inputarea__text">
+                <input type="text" title="" name="" id="">
+              </div>          
+            </div> <!-- // inputarea 끝-->
+            <div class="btnarea align__center">
+              <a href="#" class="btn__search">Search</a>
+            </div>
+          </div> <!-- // search__input end -->
+
+          <table class="list">
+            <thead>
+              <tr>
+                <th class="num">No</th>
+                <th></th>
+                <th>Recognition</th>
+                <th>Date</th>
+                <th>Spot</th>
+                <th>Device number</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="center">1</td>
+                <td><input type="checkbox" name="check" id="check" checked></td>
+                <td><figure><img src="images/person01.png"></figure></td>
+                <td>2019-07-24 13:21:20</td>
+                <td>Entrance</td>
+                <td>ab456894</td>
+              </tr>
+              <tr>
+                <td class="center">2</td>
+                <td><input type="checkbox" name="check" id="check" checked></td>
+                <td><figure><img src="images/person01.png"></figure></td>
+                <td>2019-07-24 13:21:20</td>
+                <td>Entrance</td>
+                <td>ab456894</td>
+              </tr>
+              <tr>
+                <td class="center">1</td>
+                <td><input type="checkbox" name="check" id="check" checked></td>
+                <td><figure><img src="images/person01.png"></figure></td>
+                <td>2019-07-24 13:21:20</td>
+                <td>Entrance</td>
+                <td>ab456894</td>
+              </tr>
+              <tr>
+                <td class="center">2</td>
+                <td><input type="checkbox" name="check" id="check" checked></td>
+                <td><figure><img src="images/person01.png"></figure></td>
+                <td>2019-07-24 13:21:20</td>
+                <td>Entrance</td>
+                <td>ab456894</td>
+              </tr>
+              <tr>
+                <td class="center">1</td>
+                <td><input type="checkbox" name="check" id="check" checked></td>
+                <td><figure><img src="images/person01.png"></figure></td>
+                <td>2019-07-24 13:21:20</td>
+                <td>Entrance</td>
+                <td>ab456894</td>
+              </tr>
+              <tr>
+                <td class="center">2</td>
+                <td><input type="checkbox" name="check" id="check" checked></td>
+                <td><figure><img src="images/person01.png"></figure></td>
+                <td>2019-07-24 13:21:20</td>
+                <td>Entrance</td>
+                <td>ab456894</td>
+              </tr>
+            </tbody>
+          </table>
+        
+      </div> <!-- // popup__content 끝 -->
+      <div class="btnarea align__right">
+        <a href="#" class="btn__text close">CANCLE</a>
+        <a href="#" class="btn__primary">SAVE</a>
+      </div>
+    </div>    
+  </div> <!-- mapping modal 끝 -->
+
+</body>
+</html>
