@@ -48,6 +48,9 @@ $primaryHover:#AFAFC1;
 @mixin transition1 {
   transition:all 0.3s ease-in-out; 
 }
+@mixin transition2 {
+  transition:all 0.1s ease-in-out 0.1s; 
+}
 
 
 .login {  
@@ -149,11 +152,12 @@ body {
 #menu {
   overflow: hidden;
   background: $menuAreaBg;
-  z-index:999;
+  z-index:50;
   h1 {
     width: 244px;
     height: 34px;
     line-height: 34px;
+    padding: 45px 23px 23px 23px;
     margin-bottom: 45px;
     a {
       overflow: hidden;
@@ -169,13 +173,13 @@ body {
       margin-right: 23px;      
     }
   }
-  .menulist li {
+  .menulist li {    
     overflow: hidden;
     width: 244px;
-    margin-bottom: 20px;
+    margin-bottom: 20px;    
     a {
       display: block;
-      position: relative;
+      padding-left: 23px;
       color:$menuNormal;
       font-size: 18px;
       font-weight: normal;
@@ -189,6 +193,20 @@ body {
       &:hover {
         color: $menuHover;
         font-weight: 600;        
+        border-left: 3px solid $menuHover;
+        @include transition2();
+      }
+      &.on {
+        padding-left: 20px;
+        color: $menuHover;
+        font-weight: 700;
+        border-left: 3px solid $menuHover;
+      }
+      &.on:before {        
+        content: '';
+        width: 3px;
+        height: 30px;
+        background: $menuHover;
       }
     }   
   }  
@@ -198,8 +216,7 @@ body {
   left: 0;
   top:0;
   width: 80px;
-  height: 100vh;    
-  padding: 45px 23px;
+  height: 100vh;      
 }
 .wide {
   -moz-box-shadow:0px 0px 6px #777777;
@@ -414,7 +431,7 @@ div[class$="__box"] {
   position: fixed;
   left: 0;
   top: 0;
-  z-index: 10;
+  z-index: 999;
   width: 100vw;
   height: 100vh;
   background: rgba($color: #21252D, $alpha: 0.57);
