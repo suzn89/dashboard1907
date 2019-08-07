@@ -636,79 +636,163 @@ div[class$="__box"] {
 
 // 대시보드
 .dashboard {
-  &__teams {
-    position:absolute;
-    left:50%;
-    top:50%;
-    transform:translate(-50%, -50%);
-    width: 982px;
-    height: 747px;
-    ul li {
-      position: relative;;
-      float:left;
-      width: 318px;
-      height: 368px;
-      padding-top:30px;      
+  .panelgroup {    
+    position: relative;
+    float:left;
+    width:150px;
+    height: calc(100vh - 64px);    
+    padding: 20px 15px 60px 15px;
+    border-right: 1px solid #F0F0F0;
+    border-top: 1px solid #f8f8f8;
+    background:#ffffff;
+    color:#A4AFB7;
+    &__title {
+      h3 {
+        font-weight: bold;
+      }
+      margin-bottom: 10px;
+    }
+    &__team {
+      overflow-y:auto;
+      height: calc(100% - 40px);
+      .btn__name {
+        display:block;
+        overflow: hidden;
+        width: 100%;
+        height: 30px;
+        margin-bottom: 10px;
+        padding: 0 8px;
+        line-height: 30px;
+        border: 1px solid #C4C4D1;
+        text-align: center;
+        font-weight: normal;
+        color: #C4C4D1;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        @include boxRound4();
+        &:hover {
+          background: #c4c4d1;
+          color: #ffffff;
+        }
+      }
+      .on {
+        background: #c4c4d1;
+        color: #ffffff;
+      }
+
+    }
+    &__chart {
+      position: absolute;
+      left: 15px;
+      bottom: 20px;
+      display:block;
+      width: 120px;
+      height: 35px;
+      line-height: 35px;
+      text-align: center;
+      @include boxRound4();
+    }
+    .show {
+      background: #3265F1;
+      color: #ffffff;
+    }
+    .hide {
+      background: #A4AFB7;
+      color: #ffffff;
+    }
+  }
+  .dashgroup {
+    position: absolute;
+    left: 230px;
+    width: calc(100vw - 230px);
+    height: calc(100vh - 64px);
+    min-width: 800px;
+    padding: 20px 10px;
+    &__teams {
+      ul li {
+        width: 20%;
+        float:left;
+        padding: 10px;        
+      }
+    }
+    &__team {
+      overflow: hidden;
+      width: 100%;      
+      position: relative;
+      padding: 15px;
+      background: #ffffff;
+      @include boxRound8();
+      @include boxShadow();
+      h4 {
+        margin-bottom: 10px;
+        padding-bottom: 8px;
+        border-bottom: 1px solid #f0f0f0;
+        font-size: 16px;
+        font-weight: 600;
+        color:#6563A7;
+      }
       dl {
-        width: 80%;
-        margin: 0 auto;
+        width: 33.3%;
+        float: left;
+        text-align: center;
         dt {
-          display: inline-block;
-          width: 30%;
-          color: #C4C4D1;
-          font-weight: 400;
-          font-size: 20px;
-          line-height: 50px;
-          border-bottom: 1px dotted $inputBorder;
-          &:after {
-            content: '';
-            display:block;                        
-            clear:both;
-          }
+          color:#C4C4D1;
         }
         dd {
-          display:inline-block;
-          width: 65%;
-          text-align: right;
-          font-weight: 700;
-          font-size: 22px;
-          line-height: 50px;
-          border-bottom: 1px dotted $inputBorder;
-          &:after {
-            content: '';
-            display:block;                        
-            clear:both;
-          }
-        }
-        .bordernone {
-          border-bottom:none;          
+          color:#2F2C48;
+          font-size:22px;          
         }
       }
-      .teamname {
-        display: block;        
-        position: absolute;        
-        bottom: 45px;
-        width: 100%;
-        padding: 0 20px;
+      .close {
+        display:block;
+        position: absolute;
+        top:10px;
+        right: 10px;          
+        text-indent: -999em;
+        &:after {
+          position: absolute;
+          right: 10px;
+          top: 10px;
+          font-family: 'iconfont';
+          content: '\e909';
+          font-size: 10px;
+          text-indent: 0;
+          color: #AFAFC1;
+        }
+      }
+    }
+  }
+  .withchart {
+    .dashgroup__teams {
+      float:left;      
+      width: 50%;
+      height: 100%;
+      ul li {
+        width: 33.3%;
+        float:left;
+        padding: 10px;        
+      }
+    }
+    .dashgroup__charts {
+      float: left;      
+      width: 50%;
+      height: 100%;      
+      padding: 10px 10px 0px 10px;
+      .dashgroup__chart {
+        background:#ffffff;
+        @include boxRound8();
+        @include boxShadow();
+        height: 100%;
+      }
+      h3 {
+        padding-top: 20px;
+        padding-bottom: 15px;
+        border-bottom: 1px solid #f0f0f0;
+        color:#6563A7;
         text-align: center;
-        color:#AFAFC1;
-        font-size: 18px;
-      }
-    }
-    .team01 {
-      background: url(../images/bg01.png) center top no-repeat;
-    }
-    .team02 {
-      background: url(../images/bg02.png) center top no-repeat;
-    }
-    .team03 {
-      background: url(../images/bg03.png) center top no-repeat;
-    }
-    .team04 {
-      background: url(../images/bg04.png) center top no-repeat;
-    }
-    .team05 {
-      background: url(../images/bg05.png) center top no-repeat;
+        font-size: 25px;
+        font-weight: bold;
+      }  
     }
   }
 }

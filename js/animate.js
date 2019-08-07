@@ -12,6 +12,16 @@ $(function() {
   );
 });
 
+// dashboard
+$(function() {
+  var leftHeight = $(window).height();  
+  $('.narrow').css('height', leftHeight);  
+  $(window).resize(function(){
+    var leftHeight = $(window).height(); 
+    $('.narrow').css('height', leftHeight);
+  });
+});
+
 // 검색 + 컨텐츠 박스 높이 계산
 $(function() {
   var wrapHeight = $('.contents').height();
